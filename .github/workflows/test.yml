@@ -1,0 +1,32 @@
+name: Tests
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Download Organizer tests
+        run: cd download-organizer && python -m unittest discover -v
+      - name: Git Finder Actions tests
+        run: cd git-finder-actions && python -m unittest discover -s tests -v
+      - name: Prepare Debug Bundle tests
+        run: cd prepare-debug-bundle && python -m unittest discover -s tests -v
+      - name: Image Toolkit tests
+        run: cd image-toolkit && python -m unittest discover -s tests -v
+      - name: Open Development Workspace tests
+        run: python -m pytest -q open-dev-workspace/tests/test_bundle.py
+      - name: Print Selected Files static and mock tests
+        run: |
+          python print-selected-files/tests/test_bundle.py
+          node print-selected-files/tests/test_merge.js

@@ -1,0 +1,12 @@
+{
+  "output_directory": "~/Downloads/Debug-Bundles",
+  "max_files": 100,
+  "max_file_mb": 100,
+  "max_total_mb": 300,
+  "blocked_extensions": [".pem", ".key", ".p12", ".pfx", ".p8", ".kdbx"],
+  "blocked_filename_regex": [
+    "^\\.env($|\\.)",
+    "(^|[._-])id_(rsa|ed25519|ecdsa)($|[._-])",
+    "(^|[._-])(private[-_ ]?key|credentials?|secrets?)($|[._-])"
+  ]
+}

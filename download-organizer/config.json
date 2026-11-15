@@ -1,0 +1,97 @@
+{
+  "source_dir": "~/Downloads",
+  "settle_seconds": 12,
+  "rules": [
+    {
+      "name": "Chizh diagnostic logs",
+      "extensions": [
+        ".log"
+      ],
+      "filename_globs": [
+        "chizh-*"
+      ],
+      "destination": "~/Downloads/Chizh"
+    },
+    {
+      "name": "Documents",
+      "extensions": [
+        ".pdf",
+        ".doc",
+        ".docx"
+      ],
+      "destination": "~/Downloads/Docs"
+    },
+    {
+      "name": "Images",
+      "extensions": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".webp",
+        ".svg",
+        ".heic",
+        ".avif",
+        ".tif",
+        ".tiff",
+        ".bmp"
+      ],
+      "destination": "~/Downloads/Images"
+    },
+    {
+      "name": "Media",
+      "extensions": [
+        ".mp4",
+        ".mov",
+        ".m4v",
+        ".mkv",
+        ".avi",
+        ".webm",
+        ".wmv",
+        ".mpg",
+        ".mpeg",
+        ".3gp",
+        ".m2ts",
+        ".mp3",
+        ".m4a",
+        ".aac",
+        ".wav",
+        ".flac",
+        ".ogg",
+        ".opus",
+        ".aiff"
+      ],
+      "destination": "~/Downloads/Media"
+    },
+    {
+      "name": "Archives",
+      "extensions": [
+        ".zip",
+        ".tar",
+        ".tar.gz",
+        ".tgz",
+        ".gz",
+        ".7z",
+        ".rar",
+        ".tar.xz",
+        ".tar.bz2"
+      ],
+      "destination": "~/Downloads/Archives"
+    },
+    {
+      "name": "Installers",
+      "extensions": [
+        ".dmg",
+        ".pkg"
+      ],
+      "destination": "~/Downloads/Installers"
+    },
+    {
+      "name": "Other logs",
+      "extensions": [
+        ".log"
+      ],
+      "destination": "~/Downloads/Logs"
+    }
+  ]
+}
