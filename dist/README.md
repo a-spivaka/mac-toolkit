@@ -1,11 +1,15 @@
-# Download Organizer — one-click installer for family Macs
+# One-click Download Organizer and Python installer for family Macs
 
-Download [Kids-Download-Organizer.zip](./Kids-Download-Organizer.zip) and extract it. While logged into the macOS account to configure, double-click **Install Download Organizer.command**. Repeat separately for each user.
+Download [Kids-Download-Organizer.zip](Kids-Download-Organizer.zip), extract it, and double-click **Install Download Organizer.command** from the macOS account to be configured.
 
-The ZIP is self-contained (no Git or network needed to run it), but requires **Python 3.9+** on macOS. The installer uses the same `download-organizer/install.py` and assets as the toolkit and installs a per-user LaunchAgent. It preserves existing download files and any existing sorter configuration. On first install, it will only classify *new* downloads.
+This launcher detects Python 3.9+ and uses it when already available. If missing, it downloads **Python 3.15.2** (the official macOS installer, ~82 MB) from [python.org](https://www.python.org/downloads/release/python-3152/), verifies the published SHA-256 checksum and the macOS package signature, then opens the standard macOS Installer app. Complete the Installer (administrator credentials may be required), return to the original Terminal window and press Return. The Download Organizer will then install for the current user.
 
-If macOS prevents opening the downloaded command, control-click the file and choose **Open**; follow the displayed security prompt. Do not disable Gatekeeper globally.
+**Python is system-wide and only needs to be installed once.** Download Organizer is per-user: repeat the launcher once in each child's Mac account. Existing downloads and existing organizer configuration are preserved. Downloads are sorted in the background from then on.
 
-For uninstall, double-click **Uninstall Download Organizer.command**. Personal configs, logs, and downloads remain.
+The ZIP is small and does **not** bundle Python; Internet is required if Python is missing. No Git is required. Includes Hebrew instructions and an uninstall launcher. Uninstall removes only Download Organizer, not Python or downloads.
 
-The ZIP contains the full script sources for inspection, plus Hebrew instructions.
+macOS may flag the downloaded unsigned .command script. Control-click -> Open and allow under Privacy & Security if necessary. Do not disable Gatekeeper globally.
+
+Official installer: https://www.python.org/ftp/python/3.15.2/python-3.15.2-macos11.pkg
+
+Published SHA-256: `2c6104475535b720b45774c68b0dfc9fcca2235353cf9ff81e05488f89845396`.
