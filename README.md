@@ -36,3 +36,7 @@ These are the six standalone macOS tools from our conversation. Each folder cont
 - Image Toolkit conversions are not guaranteed to remove metadata/GPS information.
 - The printing workflow has been statically tested, but actual printing, Finder actions, and AppleScript/PDFKit must be checked on the destination Mac.
 - These tools operate locally and are not installed by this archive until you explicitly run an installer.
+
+## One-click Download Organizer for family Macs
+
+For a separate macOS account (such as a child's account), download **[Kids-Download-Organizer.zip](dist/Kids-Download-Organizer.zip)**, unzip it, then double-click **Install Download Organizer.command** inside. It installs only the per-user download sorter. Requires Python 3.9+; existing downloads are left untouched. Hebrew instructions and an uninstaller are included in the ZIP. See [installer details](dist/README.md).
